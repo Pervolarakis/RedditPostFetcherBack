@@ -1,0 +1,23 @@
+services:
+  
+  reddit-posts-mongo-srv:
+    image: mongo
+    logging:
+      driver: "none"
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+
+  # challenges-cluster-srv:
+  #   build: ./challenges/
+  #   image: pervolarakis/challenges
+  #   environment:
+  #     JWT_KEY: abc123
+  #   depends_on:
+  #     - challenges-mongo-srv
+  #     - nats-srv
+  
+
+networks:
+  default:
+    name: eurytus-network
