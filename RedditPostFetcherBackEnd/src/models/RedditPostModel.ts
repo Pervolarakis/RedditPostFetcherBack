@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const redditPostSchema = new mongoose.Schema({
     userId: String,
     date: Date,
+    keyword: String,
     posts: [{ 
         selftext: String,
         author_fullname: String,

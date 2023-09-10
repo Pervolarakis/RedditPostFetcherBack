@@ -1,6 +1,7 @@
 export interface redditQuery {
     userId: String,
     date: Date,
+    keyword: String,
     posts: post[],
 }
 

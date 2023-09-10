@@ -44,6 +44,7 @@ router.get('/api/v1/posts', currentUser, requireAuth, asyncHandler(async (req: R
             const tempPostQuery: redditQuery = {
                 userId: req.currentUser!.id,
                 posts: posts,
+                keyword: req.query.keyword!.toString(),
                 date: new Date()
             }
             const redditQuery = new RedditPostModel(tempPostQuery);
